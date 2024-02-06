@@ -17,11 +17,15 @@ jobs:
         with:
           node-version: 18
 
+      - name: Clear npm cache
+        run: npm cache clean --force
+
       - name: Install dependencies
         run: yarn install
 
       - name: Build package with Rollup
-        run: npx rollup -c javascript/rollup.config.mjs
+        working-directory: ./javascript
+        run: npx rollup -c rollup.config.mjs
 
       - name: Publish package
         run: npm publish
