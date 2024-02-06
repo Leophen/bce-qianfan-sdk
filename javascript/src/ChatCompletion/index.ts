@@ -74,6 +74,13 @@ export class ChatCompletion {
         throw new Error(`Unsupported authentication type: ${this.Type}`);
     }
 
+    /**
+     * 聊天函数
+     *
+     * @param body 聊天内容
+     * @param model 聊天模型，默认为 'ERNIE-Bot-turbo'
+     * @returns 返回聊天响应的 Promise
+     */
     public async chat(body: ChatBody, model: ChatModel ='ERNIE-Bot-turbo'): Promise<ChatResp> {
        const stream = body.stream ?? false;
        return this.sendRequest(model, body, stream);
