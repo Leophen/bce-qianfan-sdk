@@ -21,7 +21,7 @@ jobs:
         run: yarn install
 
       - name: Build package with Rollup
-        run: npx rollup -c
+        run: npx rollup -c javascript/rollup.config.mjs
 
       - name: Publish package
         run: npm publish
