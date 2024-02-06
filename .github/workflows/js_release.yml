@@ -29,6 +29,9 @@ jobs:
       - name: Install rollup-plugin-typescript2
         run: yarn add --dev rollup-plugin-typescript2
 
+      - name: Install @rollup/plugin-json
+        run: yarn add --dev @rollup/plugin-json
+
       - name: Build package with Rollup
         working-directory: ./javascript
         run: npx rollup -c rollup.config.mjs
