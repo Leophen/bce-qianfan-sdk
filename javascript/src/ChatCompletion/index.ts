@@ -29,6 +29,14 @@ export class ChatCompletion {
         this.axiosInstance = axios.create();
     }
 
+    /**
+     * 发送请求
+     *
+     * @param model 聊天模型
+     * @param body 请求体
+     * @param stream 是否开启流式处理
+     * @returns 返回聊天响应
+     */
     private async sendRequest(model: ChatModel, body: ChatBody, stream: boolean = false): Promise<ChatResp> {
         const endpoint = getModelEndpoint(model, modelInfoMap);
         const requestBody = getRequestBody(body, packageJson.version);
