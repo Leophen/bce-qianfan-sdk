@@ -24,10 +24,9 @@ jobs:
         run: npm cache clean --force
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
-
-      - name: Install rollup-plugin-typescript2 @rollup/plugin-json typescript axios
-        run: yarn add --dev rollup-plugin-typescript2 @rollup/plugin-json typescript axios
+        run: |
+          yarn add rollup-plugin-typescript2
+          yarn install --frozen-lockfile
 
       - name: Build package with Rollup
         working-directory: ./javascript
