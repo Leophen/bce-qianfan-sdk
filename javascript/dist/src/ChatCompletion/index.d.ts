@@ -28,7 +28,7 @@ export declare class ChatCompletion {
      * 聊天函数
      *
      * @param body 聊天内容
-     * @param model 聊天模型，默认为 ERNIE-Bot-turbo
+     * @param model 聊天模型，默认为 'ERNIE-Bot-turbo'
      * @returns 返回聊天响应的 Promise
      */
     chat(body: ChatBody, model?: ChatModel): Promise<ChatResp>;
