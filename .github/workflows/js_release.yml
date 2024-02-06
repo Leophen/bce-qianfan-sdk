@@ -26,8 +26,8 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
 
-      - name: Install rollup-plugin-typescript2 @rollup/plugin-json typescript
-        run: yarn add --dev rollup-plugin-typescript2 @rollup/plugin-json typescript
+      - name: Install rollup-plugin-typescript2 @rollup/plugin-json typescript axios
+        run: yarn add --dev rollup-plugin-typescript2 @rollup/plugin-json typescript axios
 
       - name: Build package with Rollup
         working-directory: ./javascript
