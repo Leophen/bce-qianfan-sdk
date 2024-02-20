@@ -11,6 +11,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
+          registry-url: "https://registry.npmjs.org"
 
       - name: Install Rollup globally
         run: npm install --global rollup
@@ -25,11 +26,6 @@ jobs:
       - name: Build package with Rollup
         working-directory: ./javascript
         run: npx rollup -c rollup.config.mjs
-
-      - name: Login to npm registry
-        run: npm adduser --registry=https://registry.npmjs.org/ --scope=@your-scope --always-auth
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN_CLASSIC_AUTOMATION }}
 
       - name: Publish package
         working-directory: ./javascript
