@@ -31,4 +31,4 @@ jobs:
         working-directory: ./javascript
         run: npm publish --provenance --access public
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN_ALL }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN_CLASSIC_PUBLISH }}
