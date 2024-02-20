@@ -26,8 +26,11 @@ jobs:
         working-directory: ./javascript
         run: npx rollup -c rollup.config.mjs
 
+      - name: Authenticate with npm registry
+        run: npm login
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN_LEOPHEN }}
+
       - name: Publish package
         working-directory: ./javascript
         run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN_LEOPHEN }}
