@@ -26,6 +26,11 @@ jobs:
         working-directory: ./javascript
         run: npx rollup -c rollup.config.mjs
 
+      - name: Login to npm registry
+        run: npm adduser --registry=https://registry.npmjs.org/ --scope=@your-scope --always-auth
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN_CLASSIC_AUTOMATION }}
+
       - name: Publish package
         working-directory: ./javascript
         run: npm publish --provenance --access public
