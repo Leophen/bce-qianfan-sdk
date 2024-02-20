@@ -77,7 +77,7 @@ export class ChatCompletion {
     /**
      * 聊天函数
      *
-     * @param body 聊天内容
+     * @param body 聊天内容1
      * @param model 聊天模型，默认为 'ERNIE-Bot-turbo'
      * @returns 返回聊天响应的 Promise
      */
