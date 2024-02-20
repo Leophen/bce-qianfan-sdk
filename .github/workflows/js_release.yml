@@ -27,6 +27,7 @@ jobs:
         run: npx rollup -c rollup.config.mjs
 
       - name: Publish package
+        working-directory: ./javascript
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN_LEOPHEN }}
