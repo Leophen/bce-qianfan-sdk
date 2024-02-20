@@ -30,10 +30,10 @@ jobs:
         working-directory: ./javascript
         run: npm login
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN_LEOPHEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN_ALL }}
 
       - name: Publish package
         working-directory: ./javascript
         run: npm publish
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN_LEOPHEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN_ALL }}
