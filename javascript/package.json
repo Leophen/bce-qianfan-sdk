@@ -1,6 +1,10 @@
 {
     "name": "qianfan-sdkx",
     "version": "0.0.3",
+    "publishConfig": {
+        "access": "public",
+        "registry": "https://registry.npmjs.org/"
+    },
     "description": "",
     "main": "dist/bundle.js",
     "type": "module",
