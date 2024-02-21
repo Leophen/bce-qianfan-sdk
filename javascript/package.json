@@ -1,6 +1,6 @@
 {
-    "name": "qianfan-sdkx",
-    "version": "0.0.3",
+    "name": "qianfan-sdk",
+    "version": "0.0.1",
     "publishConfig": {
         "access": "public",
         "registry": "https://registry.npmjs.org/"
