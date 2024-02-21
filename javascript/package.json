@@ -3,7 +3,7 @@
     "version": "0.0.3",
     "publishConfig": {
         "access": "public",
-        "registry": "https://registry.npmjs.org/"
+        "registry": "https://npm.pkg.github.com"
     },
     "description": "",
     "main": "dist/bundle.js",
